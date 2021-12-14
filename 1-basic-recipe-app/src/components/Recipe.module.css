@@ -1,0 +1,38 @@
+.recipe {
+    background-color: #111620;
+    border: 1px solid #111620;
+    border-radius: 20px;
+    padding: 1rem;
+    color: #88A4DF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 40rem;
+    margin-bottom: 2rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+}
+
+.recipe img {
+    border-radius: 50%;
+    max-width: 20%;
+    object-fit: cover;
+}
+
+.recipe p {
+    font-style: italic;
+}
+
+@media all and (max-width: 992px) {
+    .recipe {
+        width: 95%;
+        margin-bottom: .5rem;
+    }
+}

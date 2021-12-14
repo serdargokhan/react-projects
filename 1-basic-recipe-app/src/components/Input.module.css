@@ -1,0 +1,21 @@
+.input {
+    background-color: #344454;
+    padding: .6rem .8rem;
+    outline: none;
+    border-color: transparent;
+    color: #88A4DF;
+    width: 80%;
+    margin-right: 1rem;
+    border-radius: 5px;
+}
+
+.input::placeholder {
+    color: #88A4DF;
+}
+
+@media all and (max-width: 992px) {
+    .input {
+        width: 100%;
+    }
+}
+
