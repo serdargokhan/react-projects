@@ -33,7 +33,7 @@ function App() {
       }
     }
     fetchCurrency();
-  }, [fromCurrency]);
+  }, [fromCurrency, API_KEY]);
 
   useEffect(() => {
     fetchFunc();
