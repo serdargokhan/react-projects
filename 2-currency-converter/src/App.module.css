@@ -1,0 +1,42 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border: 1px solid white;
+    padding: 7rem 5rem;
+    background-color: white;
+    border-radius: 1.5em;
+    box-shadow: 8px 8px 10px #0F6BD9;
+}
+
+.container h2 {
+    color: #0F6BD9;
+    font-size: 1.5rem;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.container span {
+    border: 1px solid #0F6BD9;
+    border-radius: 5px;
+    padding: .4rem 1rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.container p {
+    margin-top: .5rem;
+    color: salmon;
+}
+
+.error {
+    margin: .5rem 0;
+}
+
+@media (max-width: 992px) {
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
