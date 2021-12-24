@@ -13,7 +13,7 @@ function Exchanges() {
 
     useEffect(() => {
         async function fetchExchanges() {
-            const response = await fetch(`https://pro-api.coinmarketcap.com/v1/exchange/map?CMC_PRO_API_KEY=${API_KEY}&limit=20&sort=volume_24h`);
+            const response = await fetch(`https://cors-anywhere.herokuapp.com/https://pro-api.coinmarketcap.com/v1/exchange/map?CMC_PRO_API_KEY=${API_KEY}&limit=20&sort=volume_24h`);
             const data = await response.json();
             setExchangeId(data.data);
         }
@@ -25,7 +25,7 @@ function Exchanges() {
 
     useEffect(() => {
         async function getExchangeInformations() {
-            const response = await fetch(`https://pro-api.coinmarketcap.com/v1/exchange/info?CMC_PRO_API_KEY=dca22541-b717-4053-8bc5-608d8e173179&id=${idArray.join()}`);
+            const response = await fetch(`https://cors-anywhere.herokuapp.com/https://pro-api.coinmarketcap.com/v1/exchange/info?CMC_PRO_API_KEY=dca22541-b717-4053-8bc5-608d8e173179&id=${idArray.join()}`);
             const data = await response.json();
             setExchangeData(Object.entries(data.data));
             setLoading(false);

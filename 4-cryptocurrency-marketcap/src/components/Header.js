@@ -14,7 +14,7 @@ function Header() {
 
     useEffect(() => {
         async function fetchGeneralData() {
-            const response = await fetch(`https://pro-api.coinmarketcap.com/v1/global-metrics/quotes/latest?CMC_PRO_API_KEY=${API_KEY}`);
+            const response = await fetch(`https://cors-anywhere.herokuapp.com/https://pro-api.coinmarketcap.com/v1/global-metrics/quotes/latest?CMC_PRO_API_KEY=${API_KEY}`);
             const data = await response.json();
             setTotalCurrency(data.data.total_cryptocurrencies);
             setBtcDom(data.data.btc_dominance);
