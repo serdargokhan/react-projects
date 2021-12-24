@@ -16,7 +16,7 @@ function Token(props) {
     useEffect(() => {
         async function getLogos() {
             if (coinNames.length > 0) {
-                const response = await fetch(`https://cors-anywhere.herokuapp.com/https://pro-api.coinmarketcap.com/v1/cryptocurrency/info?CMC_PRO_API_KEY=${API_KEY}&symbol=${coinNames}`);
+                const response = await fetch(`https://pro-api.coinmarketcap.com/v1/cryptocurrency/info?CMC_PRO_API_KEY=${API_KEY}&symbol=${coinNames}`);
                 const data = await response.json();
                 setArrivedData(Object.entries(data.data));
                 setLoading(false);

@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/home"
+  to = "https://pro-api.coinmarketcap.com"
+  status = 200
+  force = true
