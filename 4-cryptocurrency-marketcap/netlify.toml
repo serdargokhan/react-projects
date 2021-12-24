@@ -1,5 +1,5 @@
 [[redirects]]
-  from = "/coins"
-  to = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?CMC_PRO_API_KEY=dca22541-b717-4053-8bc5-608d8e173179"
+  from = "/home"
+  to = "https://pro-api.coinmarketcap.com/v1/global-metrics/quotes/latest?CMC_PRO_API_KEY=dca22541-b717-4053-8bc5-608d8e173179"
   status = 200
   force = true
