@@ -1,5 +1,5 @@
 [[redirects]]
-  from = "/home"
-  to = "https://pro-api.coinmarketcap.com"
+  from = "/*"
+  to = "https://pro-api.coinmarketcap.com/:splat"
   status = 200
   force = true
