@@ -5,7 +5,7 @@ module.exports = function (app) {
     app.use(
         '​/api',
         createProxyMiddleware({
-            target: 'http://siteurl1.com',
+            target: 'https://serdargokhan-crypto-marketcap.netlify.app/',
             changeOrigin: true,
         })
     );
