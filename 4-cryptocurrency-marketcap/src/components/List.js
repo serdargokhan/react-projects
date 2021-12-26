@@ -17,7 +17,7 @@ function List() {
 
     useEffect(() => {
         async function fetchCoins() {
-            const response = await fetch(`https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?CMC_PRO_API_KEY=${API_KEY}`);
+            const response = await fetch(`api/cryptocurrency/listings/latest?CMC_PRO_API_KEY=${API_KEY}`);
             const data = await response.json();
             setArrivedData(data.data);
         }
