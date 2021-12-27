@@ -4,7 +4,6 @@ import Card from "../UI/Card";
 import Loading from "../UI/Loading";
 
 function Header() {
-    const API_KEY = process.env.REACT_APP_API_KEY;
 
     const [totalCurrency, setTotalCurrency] = useState(0);
     const [btcDom, setBtcDom] = useState(0);
@@ -14,7 +13,7 @@ function Header() {
 
     useEffect(() => {
         async function fetchGeneralData() {
-            const response = await fetch(`/api/global-metrics/quotes/latest?CMC_PRO_API_KEY=${API_KEY}`);
+            const response = await fetch(`/api/global-metrics/quotes/latest?CMC_PRO_API_KEY=dca22541-b717-4053-8bc5-608d8e173179`);
             const data = await response.json();
             setTotalCurrency(data.data.total_cryptocurrencies);
             setBtcDom(data.data.btc_dominance);

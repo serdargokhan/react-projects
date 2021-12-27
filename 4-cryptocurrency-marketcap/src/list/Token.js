@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 
 function Token(props) {
-    const API_KEY = process.env.REACT_APP_API_KEY;
 
     const [arrivedData, setArrivedData] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -16,7 +15,7 @@ function Token(props) {
     useEffect(() => {
         async function getLogos() {
             if (coinNames.length > 0) {
-                const response = await fetch(`/api/cryptocurrency/info?CMC_PRO_API_KEY=${API_KEY}&symbol=${coinNames}`);
+                const response = await fetch(`/api/cryptocurrency/info?CMC_PRO_API_KEY=dca22541-b717-4053-8bc5-608d8e173179&symbol=${coinNames}`);
                 const data = await response.json();
                 setArrivedData(Object.entries(data.data));
                 setLoading(false);

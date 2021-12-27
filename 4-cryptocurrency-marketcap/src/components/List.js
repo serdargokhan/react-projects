@@ -9,7 +9,6 @@ import Marketcap from "../list/Marketcap";
 import Loading from "../UI/Loading";
 
 function List() {
-    const API_KEY = process.env.REACT_APP_API_KEY;
 
     const [arrivedData, setArrivedData] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -17,7 +16,7 @@ function List() {
 
     useEffect(() => {
         async function fetchCoins() {
-            const response = await fetch(`/api/cryptocurrency/listings/latest?CMC_PRO_API_KEY=${API_KEY}`);
+            const response = await fetch(`/api/cryptocurrency/listings/latest?CMC_PRO_API_KEY=dca22541-b717-4053-8bc5-608d8e173179`);
             const data = await response.json();
             setArrivedData(data.data);
         }

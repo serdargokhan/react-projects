@@ -5,7 +5,6 @@ import Loading from "../UI/Loading";
 import Button from "../UI/Button";
 
 function Exchanges() {
-    const API_KEY = process.env.REACT_APP_API_KEY;
 
     const [exchangeId, setExchangeId] = useState([]);
     const [exchangeData, setExchangeData] = useState([]);
@@ -13,7 +12,7 @@ function Exchanges() {
 
     useEffect(() => {
         async function fetchExchanges() {
-            const response = await fetch(`/api/exchange/map?CMC_PRO_API_KEY=${API_KEY}&limit=20&sort=volume_24h`);
+            const response = await fetch(`/api/exchange/map?CMC_PRO_API_KEY=dca22541-b717-4053-8bc5-608d8e173179&limit=20&sort=volume_24h`);
             const data = await response.json();
             setExchangeId(data.data);
         }
