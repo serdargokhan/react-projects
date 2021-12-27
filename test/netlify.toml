@@ -6,3 +6,4 @@
 
 [build]
   functions = "functions/"
+  publish = "build"
