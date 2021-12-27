@@ -5,5 +5,6 @@
   force = true
 
 [build]
-  functions = "functions/"
+  command = "npm run build"
+  functions = "functions"
   publish = "build"
