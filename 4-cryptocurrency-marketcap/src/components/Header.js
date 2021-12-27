@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 
 import Card from "../UI/Card";
 import Loading from "../UI/Loading";
+import API_KEY from "../apikey.js";
 
 function Header() {
-    const API_KEY = process.env.REACT_APP_API_KEY;
 
     const [totalCurrency, setTotalCurrency] = useState(0);
     const [btcDom, setBtcDom] = useState(0);
