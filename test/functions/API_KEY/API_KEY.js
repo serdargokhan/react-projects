@@ -13,6 +13,8 @@ const handler = async function (event) {
   const URL = `${API_SECRET}`
 
   console.log('Constructed URL is ...', URL)
+
+  return URL;
 }
 
 module.exports = { handler }
