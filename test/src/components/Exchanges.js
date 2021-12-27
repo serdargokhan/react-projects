@@ -5,7 +5,7 @@ import Loading from "../UI/Loading";
 import Button from "../UI/Button";
 
 function Exchanges() {
-    const API_KEY = "/.netlify/functions/API_KEY.js";
+    const API_KEY = "/netlify/functions/API_KEY.js";
 
     const [exchangeId, setExchangeId] = useState([]);
     const [exchangeData, setExchangeData] = useState([]);
