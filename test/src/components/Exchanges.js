@@ -5,6 +5,7 @@ import Loading from "../UI/Loading";
 import Button from "../UI/Button";
 
 function Exchanges() {
+    const API_KEY = "/netlify/functions/API_KEY.js";
 
     const [exchangeId, setExchangeId] = useState([]);
     const [exchangeData, setExchangeData] = useState([]);
@@ -12,7 +13,7 @@ function Exchanges() {
 
     useEffect(() => {
         async function fetchExchanges() {
-            const response = await fetch(`/api/exchange/map?CMC_PRO_API_KEY=/netlify/functions/API_KEY.js&limit=20&sort=volume_24h`);
+            const response = await fetch(`/api/exchange/map?CMC_PRO_API_KEY=${API_KEY}&limit=20&sort=volume_24h`);
             const data = await response.json();
             setExchangeId(data.data);
         }
