@@ -8,6 +8,8 @@
 
 -  [4-Cryptocurrency Marketcap](https://serdargokhan-crypto-marketcap.netlify.app/)
 
+-  [5-Create Blog Posts](https://serdargokhan-blog.netlify.app/)
+
 
 
 
