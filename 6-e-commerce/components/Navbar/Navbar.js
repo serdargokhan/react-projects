@@ -15,7 +15,6 @@ import MenuLogo from "../../public/menu.svg";
 function Navbar() {
 
     const [click, setClick] = useState(false);
-    const [className, setClassName] = useState(false);
 
     const { idToken, setIdToken, cartArray } = useAuth();
 
@@ -42,22 +41,13 @@ function Navbar() {
         setClick(false);
     }
 
-    useEffect(() => {
-        setClassName(true);
-        const timer = setTimeout(() => {
-            setClassName(false);
-        }, 1000);
-
-        return () => clearTimeout(timer);
-    }, [cartArray]);
-
     const productLink = <li className={`list-none ${router.pathname == "/products" ? "text-logo-green font-bold" : ""}`}>
         <Link href="/products" >Products</Link>
     </li>
 
     const cartLink = <li className="list-none"  >
         <Link href="/cart" >
-            <div className={`hover:cursor-pointer ${router.pathname == "/cart" ? "text-logo-green font-bold " : ""} ${className ? "md:animate-ping lg:animate-ping" : ""}`}>
+            <div className={`hover:cursor-pointer ${router.pathname == "/cart" ? "text-logo-green font-bold " : ""}`}>
                 <p>Card<span className={"border ml-1 px-2 py-1 rounded-lg bg-white"}>{cartArray.length}</span></p>
             </div>
         </Link>
