@@ -16,20 +16,20 @@ function Products({ allProducts }) {
     const router = useRouter();
 
     useEffect(() => {
-        setAllProducts(allProducts);
-    }, [allProducts]);
-
-    if (allProducts == undefined || allProducts == null) return <AuthLayout description="No products to be shown" />
-
-    const products = Object.values(allProducts);
-
-    useEffect(() => {
         if (clickedId !== undefined) router.push("/products/" + clickedId);
     }, [clickedId]);
 
     useEffect(() => {
         if (negativeNumber) scrollTo(0, 0);
     }, [negativeNumber]);
+
+    useEffect(() => {
+        setAllProducts(allProducts);
+    }, [allProducts]);
+
+    if (allProducts == undefined || allProducts == null) return <AuthLayout description="No products to be shown" />
+
+    const products = Object.values(allProducts);
 
     function addToCartHandler(id) {
         const [addedProduct] = products.reverse().filter(product => product.id === id);
