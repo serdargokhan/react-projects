@@ -53,7 +53,7 @@ function Cart() {
                         console.log(itemPrice);
                         sumofPrices = sumofPrices + Number(itemPrice);
 
-                        return <li className="grid-cols-5 grid gap-5 items-center border-b-2 w-full px-3 py-5 md:p-2 lg:p-2 md:pl-16 lg:pl" key={item.id}>
+                        return <li className="grid-cols-5 grid gap-5 items-center border-b-2 w-full px-3 py-5 md:p-2 lg:p-2 md:pl-16 lg:pl-32" key={item.id}>
                             <img className=" md:max-h-32 lg:max-h-40 max-h-36 rounded-lg" src={item.productImage} alt={item.productName} />
                             <p className="">{item.productName}</p>
                             <span className="text-center">{item.number} {item.number === 1 ? "Piece" : "Pieces"}</span>
