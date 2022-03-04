@@ -23,19 +23,19 @@ function SectionOne() {
 
                     <div className="text-center space-y-8 md:space-y-0 lg:space-y-0 w-full mx-auto md:grid md:grid-cols-2 md:gap-8 lg:grid lg:grid-cols-4">
                         <div>
-                            <Image src={Food} />
+                            <Image src={Food} priority="true" />
                             <Link href="/products" >FOOD</Link>
                         </div>
                         <div>
-                            <Image src={Jewelry} />
+                            <Image src={Jewelry} priority="true" />
                             <Link href="/products" >JEWELRY</Link>
                         </div>
                         <div>
-                            <Image src={Drink} />
+                            <Image src={Drink} priority="true" />
                             <Link href="/products" >DRINK</Link>
                         </div>
                         <div>
-                            <Image src={Cosmetic} />
+                            <Image src={Cosmetic} priority="true" />
                             <Link href="/products" >COSMETIC</Link>
                         </div>
                     </div>
@@ -46,22 +46,22 @@ function SectionOne() {
 
                         <div className="md:grid-cols-2 md:grid md:gap-8 lg:grid lg:grid-cols-4 lg:gap-6">
                             <div className="space-y-2 pt-8">
-                                <Image src={Mail} width="36" height="36" />
+                                <Image src={Mail} width="36" height="36" priority="true" />
                                 <p>Start an online business</p>
                                 <p className="font-light">Create a business, whether you’ve got a fresh idea or are looking for a new way to make money.</p>
                             </div>
                             <div className="space-y-2 pt-8">
-                                <Image src={Store} width="36" height="36" />
+                                <Image src={Store} width="36" height="36" priority="true" />
                                 <p>Move your business online</p>
                                 <p className="font-light">Turn your retail store into an online store and keep serving customers without missing a beat.</p>
                             </div>
                             <div className="space-y-2 pt-8">
-                                <Image src={Recycle} width="36" height="36" />
+                                <Image src={Recycle} width="36" height="36" priority="true" />
                                 <p>Switch to Shopify</p>
                                 <p className="font-light">Bring your business to Shopify, no matter which ecommerce platform you’re currently using.</p>
                             </div>
                             <div className="space-y-2 pt-8">
-                                <Image src={People} width="36" height="36" />
+                                <Image src={People} width="36" height="36" priority="true" />
                                 <p>Hire a Shopify expert</p>
                                 <p className="font-light">Get set up with the help of a trusted freelancer or agency from the Shopify Experts Marketplace.</p>
                             </div>

@@ -15,6 +15,7 @@ import MenuLogo from "../../public/menu.svg";
 function Navbar() {
 
     const [click, setClick] = useState(false);
+    const [className, setClassName] = useState(false);
 
     const { idToken, setIdToken, cartArray } = useAuth();
 
@@ -41,6 +42,15 @@ function Navbar() {
         setClick(false);
     }
 
+    useEffect(() => {
+        setClassName(true);
+        const timer = setTimeout(() => {
+            setClassName(false);
+        }, 1000);
+
+        return () => clearTimeout(timer);
+    }, [cartArray]);
+
     const productLink = <li className={`list-none ${router.pathname == "/products" ? "text-logo-green font-bold" : ""}`}>
         <Link href="/products" >Products</Link>
     </li>
@@ -59,7 +69,7 @@ function Navbar() {
                 <div className="flex justify-between items-center mx-auto w-11/12">
 
                     <Link href="/" >
-                        <a><Image src={Logo} width="72" height="72" /></a>
+                        <a><Image src={Logo} width="72" height="72" priority="true" /></a>
                     </Link>
 
                     <div className="flex justify-between gap-4 items-center">

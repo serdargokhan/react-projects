@@ -40,7 +40,7 @@ function Signup() {
 
     useEffect(() => {
         async function sendData() {
-            const request = await fetch("https://e-commerce-ad64f-default-rtdb.europe-west1.firebasedatabase.app/users.json", {
+            await fetch("https://e-commerce-ad64f-default-rtdb.europe-west1.firebasedatabase.app/users.json", {
                 method: "POST",
                 body: JSON.stringify({
                     ...inputText,
@@ -48,8 +48,6 @@ function Signup() {
                 }),
                 headers: { "Content-Type": "application/json" }
             });
-            const data = await request.json();
-            console.log(data);
         }
         if (validation) sendData();
 
@@ -59,7 +57,7 @@ function Signup() {
         <div className="min-h-screen flex items-center bg-right bg-[url('../public/backImage.jpeg')]">
             <div className="bg-white rounded-lg border-2 p-5 w-10/12 mx-auto md:w-6/12 lg:w-5/12">
                 <span className="hover:cursor-pointer">
-                    <Link href="/" ><a><Image src={Logo} width="96" height="96" /></a></Link>
+                    <Link href="/" ><a><Image src={Logo} width="96" height="96" priority="true" /></a></Link>
                 </span>
 
                 <div className="pb-8 space-y-4">

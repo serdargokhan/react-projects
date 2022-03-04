@@ -56,7 +56,7 @@ function Homepage() {
             </div>
 
             <div className="w-full mx-auto">
-                <Image src={MainImage} />
+                <Image src={MainImage} priority="true" />
             </div>
 
         </main>
