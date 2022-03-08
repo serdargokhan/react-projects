@@ -23,7 +23,7 @@ function App() {
   const fetchFunc = useCallback(() => {
     async function fetchCurrency() {
       try {
-        const response = await fetch(`https://freecurrencyapi.net/api/v2/latest?apikey=${API_KEY}&base_currency=${fromCurrency}`);
+        const response = await fetch(`https://api.currencyapi.com/v3/latest?apikey=${API_KEY}&base_currency=${fromCurrency}`);
         if (!response.ok) throw new Error("Something went wrong.");
         const data = await response.json();
         setCurrencyObj(data);
@@ -34,6 +34,7 @@ function App() {
     }
     fetchCurrency();
   }, [fromCurrency, API_KEY]);
+
 
   useEffect(() => {
     fetchFunc();
@@ -62,7 +63,7 @@ function App() {
     setSum(0);
   }, [toCurrency]);
 
-  const total = (inputText * currencyObj.data[toCurrency]).toFixed(4);
+  const total = (inputText * currencyObj.data[toCurrency]?.value).toFixed(4);
 
   return (
     <div className={classes.container}>
