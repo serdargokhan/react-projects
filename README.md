@@ -12,7 +12,7 @@
 
 -  [6-E-commerce (NextJS)](https://serdargokhan-e-commerce.netlify.app/)
 
--  [6-List Your Websites (NextJS)](https://serdargokhan-list-your-websites.vercel.app/)
+-  [7-List Your Websites (NextJS)](https://serdargokhan-list-your-websites.vercel.app/)
 
 
 
