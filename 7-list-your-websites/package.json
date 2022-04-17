@@ -1,0 +1,33 @@
+{
+    "name": "list-your-websites",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "@chakra-ui/react": "^1.8.8",
+        "@emotion/react": "^11.9.0",
+        "@emotion/styled": "^11.8.1",
+        "@firebase/auth-types": "^0.11.0",
+        "@fontsource/nunito": "^4.5.8",
+        "firebase": "^9.6.10",
+        "framer-motion": "^6.2.9",
+        "next": "12.1.4",
+        "react": "17.0.2",
+        "react-dom": "17.0.2",
+        "react-icons": "^4.3.1",
+        "swr": "^1.3.0"
+    },
+    "devDependencies": {
+        "@types/node": "17.0.23",
+        "@types/react": "17.0.2",
+        "@types/react-dom": "18.0.0",
+        "eslint": "8.13.0",
+        "eslint-config-next": "12.1.4",
+        "typescript": "4.6.3"
+    }
+}
