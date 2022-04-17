@@ -25,7 +25,7 @@ function DashboardPage() {
             <Head>
                 <title>Dashboard</title>
             </Head>
-            <Box bg="blackAlpha.800" minH="100vh">
+            <Box bg="blackAlpha.800" minH="100vh" pb={10}>
                 <Navbar />
                 <Main />
                 <Table />

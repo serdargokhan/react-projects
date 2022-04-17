@@ -35,7 +35,7 @@ function Profile() {
             justify="center"
             direction="column"
             textColor="white"
-            mt={14}
+            mt={8}
             gap={3}
         >
             <Avatar src={user?.currentUser?.photoURL!} size="2xl" />
